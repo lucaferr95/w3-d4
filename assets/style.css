@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  text-align: center;
+}
+main {
+  background-color: pink;
+  background-size: cover;
+  background-position: top;
+  color: #270000;
+  font-style: oblique;
+  padding: 20px;
+  height: auto;
+}
+header ul li {
+  list-style: none;
+  font-size: 1.1em;
+  display: inline-block;
+  text-decoration: none;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #df658c;
+}
+h1 {
+  font-size: 2em;
+  display: block;
+  border-style: dotted;
+  margin-top: 20px;
+  width: 90%; /* Puoi modificare la larghezza per farla corrispondere a quella del contenitore */
+  margin-left: auto;
+  margin-right: auto; /* Per centrare l'h1 rispetto al contenitore */
+  padding: 10px; /* Puoi aggiungere un po' di padding per separare il testo dal bordo */
+  text-align: center; /* Allinea il testo al centro */
+  max-width: 800px;
+}
+#borderContainer {
+  border: #270000;
+  border-style: double;
+}
+#tombolaContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 10px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  border: #000000;
+  border-style: double;
+}
+h2 {
+  color: red;
+  font-style: normal;
+}
+p {
+  font-size: 30px;
+}
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.03em;
+}
+#numeriList {
+  list-style: none;
+  font-size: 0.8em;
+  padding-right: 10px;
+  padding-left: 12px;
+  display: flex; /* Usa flex per il layout */
+  flex-wrap: wrap; /* Permette ai numeri di andare a capo */
+  gap: 10px; /* Distanza tra i numeri */
+  justify-content: center; /* Centra i numeri */
+}
+
+#numeriList li {
+  list-style-type: none;
+  width: 60px; /* Imposta la larghezza di ogni numero */
+  height: 60px; /* Imposta l'altezza di ogni numero */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%; /* Forma circolare */
+  font-size: 0.8em;
+  font-weight: bold;
+  border: #e30909 solid 1px;
+  background-size: cover; /* Immagine come sfondo */
+  background-position: center; /* Centra l'immagine */
+  font-style: oblique;
+  color: rgb(0, 0, 0); /* Colore del numero */
+}
+
+#numeriList li span {
+  font-weight: bold;
+  font-style: oblique;
+  color: rgb(0, 0, 0); /* Colore del testo */
+  font-size: 20px;
+  text-shadow: 2px 2px 3px #fff, -2px -2px 3px #fff, 2px -2px 3px #fff,
+    -2px 2px 3px #fff;
+}
+
+#randomNumbers {
+  color: #dfcece;
+  font-style: oblique;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  width: 150px;
+  height: 80px;
+  font-weight: 600;
+  padding: 14px;
+  margin: 6px;
+  background-color: #916e16e9;
+  border: #000000 1px solid;
+  border-radius: 0.45em;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(220, 5, 5, 0.83);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#randomNumbers:hover {
+  background-color: #df658c;
+  transform: scale(1.1);
+}
+#randomNumbers:active {
+  background-color: #b94f6f;
+}
+
+.selected {
+  border-color: #7a408a;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #7a408a;
+}
+.cellClass {
+  width: 60px; /* Aumenta la larghezza della cella */
+  height: 60px; /* Aumenta l'altezza della cella */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8a5240;
+  color: #efd7f5;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.xMark {
+  position: absolute;
+  color: red; /* Cambia il colore a rosso pieno per testare */
+  font-size: 40px; /* Aumenta la dimensione della X */
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra la X sopra la cella */
+}
+#cartelleContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+/* Stile della cartella */
+.cartella {
+  display: flex;
+  justify-content: space-around; /* Distanza tra le celle della cartella */
+  align-items: center;
+  padding: 20px; /* Maggiore padding per una cartella più grande */
+  margin-bottom: 20px; /* Aggiungi spazio sotto la cartella */
+  background-color: #fff; /* Aggiungi uno sfondo bianco alla cartella */
+  border: 3px solid #ccc; /* Aggiungi un bordo alla cartella */
+  border-radius: 10px; /* Aggiungi angoli arrotondati */
+  width: 100%; /* Imposta la larghezza della cartella (o percentuale che preferisci) */
+  max-width: 600px; /* Limita la larghezza massima */
+}
+
+/* Stile delle celle all'interno della cartella */
+.cellaCartella {
+  font-size: 15px; /* Aumenta la dimensione del testo */
+  font-weight: bold;
+  text-align: center;
+  width: 60px; /* Imposta una larghezza maggiore per le celle */
+  height: 60px; /* Imposta un'altezza maggiore per le celle */
+  border-radius: 50%; /* Rende le celle rotonde */
+  background-color: rgba(255, 52, 52, 0.671); /* Sfondo semitrasparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  font-style: oblique;
+  color: rgb(0, 0, 0); /* Colore del testo */
+  text-shadow: 2px 2px 3px #fff, -2px -2px 3px #fff, 2px -2px 3px #fff,
+    -2px 2px 3px #fff;
+
+  position: relative; /* Aggiungi questa riga */
+}
+.dot {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #e20909;
+}
+
+/* Aggiungi un effetto hover alle celle per evidenziarle */
+.cellaCartella:hover {
+  background-color: #ffeb3b; /* Colore di sfondo quando la cella è attiva */
+  cursor: pointer;
+}
